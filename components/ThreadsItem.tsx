@@ -6,7 +6,7 @@ import { Text } from "./Themed";
 export default function ThreadsItem(thread: Thread): JSX.Element {
   return (
     <View>
-      <Text>{thread.author.name}</Text>
+      <Text>{thread.author.username}</Text>
     </View>
   );
 }

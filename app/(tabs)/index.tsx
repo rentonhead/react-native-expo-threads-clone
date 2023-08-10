@@ -10,6 +10,7 @@ import Lottie from "lottie-react-native";
 import { createRandomUser } from "@/utils/generate-dummy-data";
 import { ThreadsContext } from "@/context/thread-context";
 import { Text } from "@/components/Themed";
+import ThreadsItem from "@/components/ThreadsItem";
 
 export default function TabOneScreen() {
   const animationRef = React.useRef<Lottie>(null);
@@ -39,7 +40,7 @@ export default function TabOneScreen() {
           style={{ width: 90, height: 90, alignSelf: "center" }}
         />
         {threads.map((thread) => (
-          <Text key={thread.id}>{thread.author.name}</Text>
+          <ThreadsItem key={thread.id} {...thread} />
         ))}
       </ScrollView>
     </SafeAreaView>
